@@ -1,0 +1,81 @@
+
+<div class="container mt-4">
+    <div class="d-flex">
+        <div class="flex-grow-1  p-3">
+            <div class="row">
+                <div class="col-lg-12 bg-white shadow-sm rounded-lg">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Intro</h2>
+                        </div>
+                        <div class="col-lg-12 newrefresh">
+                        </div>
+                        <div class="col-lg-12 realvalues text-muted">
+                            <p class="values">
+                                <img class="hu5pjgll cwsop09l" src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/X_t0JnueVu-.png" alt="" width="20" height="20">&nbsp;&nbsp; Lives in {{$user->city}}</p>
+                            <p class="values"> 
+                                <img class="hu5pjgll cwsop09l" src="https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/CZzXbYX7tI2.png" alt="" width="20" height="20">&nbsp;&nbsp; Joined {{ $user->created_at->diffForHumans() }}
+                            </p>
+                            <p class="values">
+                                <a href="https://www.instagram.com/{{$user->instagram}}/" class="text-decoration-none" target="blank"> 
+                                    <img class="hu5pjgll cwsop09l" src="https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/22ubiF2Af05.png" alt="" width="20" height="20"> {{$user->instagram }}
+                                </a>
+                            </p>
+                            <p class="values">
+                                <a href="tel:{{$user->whatsapp}}" class="text-decoration-none">
+                                    <img class="hu5pjgll cwsop09l" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/LO4H5gnjqGb.png" alt="" width="20" height="20"> {{ $user->whatsapp }}
+                                </a>
+                            </p>
+
+                        </div> 
+
+                        <div class="col-lg-12 changedvalues text-muted" style="display: none;">
+                            <p class=" alert alert-danger" style="display: none;">Something Went Wrong <span class="close" data-target="alert" data-dismiss="alert" style="cursor: pointer;" id="alretmessagesome">&times;</span></p>
+                            <form method="POST" id="updatecityinsta" action="{{route('profile.update',$user->name)}}">
+                                Your City
+                                <input type="text" name="city" class="form-control">
+                                <br>
+                                Your Instagram Username
+                                <input type="text" name="instagram" class="form-control">
+                                <br>
+                                @csrf
+                                <button class="btn btn-block btn-sm btn-primary" type="submit">Update</button>
+                                <br>
+                                <p class="btn btn-block btn-sm bg-light" id="canceleditprofile">Cancel</p>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-12">
+                            @if(auth()->user()->name == $user->name)
+                                <button class="btn btn-block bg-light" id="editprofile">Edit Details</button> 
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" bg-white">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    @include('createpost.app')
+                </div>
+                <div class="col-lg-8 mt-4">
+                     @include('posts.app',[
+                            'posts'=>$user->posts
+                        ])
+                </div>
+                <div class="col-lg-8 bg-white  text-center mt-4 p-5 shadow-sm rounded-lg"> 
+                    <h1 class="text-muted">Welcome<br> This Is Facebook Clone App</h1>
+                    Rate this
+                        <button class="btn" style="font-size: 30px">😍</button>
+                        <button class="btn" style="font-size: 30px">😣</button>
+                </div>
+            </div>
+        </div> 
+
+
+
+
+    </div>
+</div>

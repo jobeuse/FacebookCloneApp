@@ -1,0 +1,183 @@
+.active, .svg-icon:hover {
+  fill: #1771E6;
+}
+
+.svg-icon-dots:hover{
+    background: #f1f1f1; 
+    padding: 4px;
+    cursor: pointer;
+    width:30px;
+    border-radius: 50%;
+}
+
+.bottomiconcreatepost:hover{
+     background: #f1f1f1;  
+    cursor: pointer; 
+    border-radius:10px;
+}
+
+.active{
+	border-bottom: 2px solid #1771E6;
+}
+
+.mainlinks a{
+	padding-left:40px;
+	padding-right: 40px;
+	padding-top:16px;
+	padding-bottom:16px;
+}
+.mainlinks a:hover{
+	background: #f1f1f1;
+	border-radius: 15px;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+.form-control{
+	background: #f1f1f1;
+	border:none;
+	border-radius: 25px;
+}
+.rightlinks button{
+	background: #f1f1f1;
+	border:none;
+	border-radius: 25px;
+}
+.rightlinks a{
+	padding: 10px;
+	cursor: pointer;
+	background: #f1f1f1;
+	border:none;
+	border-radius: 50%;
+}
+.leftsidelinks:hover{
+	background:#E4E6E9;
+	border:none;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.videolive{
+	fill: #F02849;
+	stroke: #F02849;
+}
+.image{
+	fill:#45BD62;
+	stroke: #45BD62;
+}
+.feelings{
+	color:#F8BD34;
+	font-size: 30px;
+}
+
+.model-title .close{
+	background: #f1f1f1;
+}
+.stories:hover, .create:hover{
+	cursor: pointer;
+	background: #F0F2F5
+}
+.stories img:hover{
+  transform: scale(1.03);
+
+}
+
+.fa-plus{
+color: white;
+position: absolute;
+top: -10px;
+background: #1771E6;
+padding: 10px;
+border-radius: 50%;
+left: 60px;
+border: 5px solid white;
+
+
+}
+
+.postcontent{
+    height:400px;
+}
+
+.postcontenttt{
+    height:700px;
+}
+
+.showless{ 
+    position: absolute;
+    top: 30%;
+    bottom: 50%;
+    left: 8%;
+    right: 10%; 
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center
+}
+
+.showdescription{
+
+    position: absolute;
+    top: 30%;
+    bottom: 50%;
+    left: 8%;
+    right: 10%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center
+}
+.secondlinks a{
+    color: grey;
+}
+.secondlinks .active{
+    border-radius: 0px;
+    color:#1771E6;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1771E6;
+}
+
+
+.overlay{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: rgba(255,255,255,0.8) url("/examples/images/loader.gif") center no-repeat;
+    }
+
+    
+    body.loading{
+        overflow: hidden;   
+    } 
+    body.loading .overlay{
+        display: block;
+    }
+
+    .righticons:hover{
+    background-color: #ffff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.hoverfriends:hover{
+    background: #f1f1f1;
+    border-radius: 15px;
+    cursor: pointer;
+}
